@@ -16,6 +16,10 @@
 		04F853181FCE27D900A2701D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F853171FCE27D900A2701D /* main.m */; };
 		04F853221FCE27D900A2701D /* CookiesAgainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F853211FCE27D900A2701D /* CookiesAgainTests.m */; };
 		04F8532D1FCE27D900A2701D /* CookiesAgainUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F8532C1FCE27D900A2701D /* CookiesAgainUITests.m */; };
+		04F8533C1FCE29E800A2701D /* CookiesJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F8533B1FCE29E800A2701D /* CookiesJSON.m */; };
+		04F8533F1FCE2A6700A2701D /* Cookie.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F8533E1FCE2A6700A2701D /* Cookie.m */; };
+		04F853471FCE321300A2701D /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F853451FCE321300A2701D /* CustomCell.m */; };
+		04F853481FCE321300A2701D /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F853461FCE321300A2701D /* CustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,13 @@
 		04F853281FCE27D900A2701D /* CookiesAgainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookiesAgainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F8532C1FCE27D900A2701D /* CookiesAgainUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookiesAgainUITests.m; sourceTree = "<group>"; };
 		04F8532E1FCE27D900A2701D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04F8533A1FCE29E800A2701D /* CookiesJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CookiesJSON.h; sourceTree = "<group>"; };
+		04F8533B1FCE29E800A2701D /* CookiesJSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookiesJSON.m; sourceTree = "<group>"; };
+		04F8533D1FCE2A6700A2701D /* Cookie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cookie.h; sourceTree = "<group>"; };
+		04F8533E1FCE2A6700A2701D /* Cookie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cookie.m; sourceTree = "<group>"; };
+		04F853441FCE321300A2701D /* CustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		04F853451FCE321300A2701D /* CustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		04F853461FCE321300A2701D /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +124,13 @@
 				04F853161FCE27D900A2701D /* Info.plist */,
 				04F853171FCE27D900A2701D /* main.m */,
 				04F8530E1FCE27D900A2701D /* CookiesAgain.xcdatamodeld */,
+				04F8533A1FCE29E800A2701D /* CookiesJSON.h */,
+				04F8533B1FCE29E800A2701D /* CookiesJSON.m */,
+				04F8533D1FCE2A6700A2701D /* Cookie.h */,
+				04F8533E1FCE2A6700A2701D /* Cookie.m */,
+				04F853441FCE321300A2701D /* CustomCell.h */,
+				04F853451FCE321300A2701D /* CustomCell.m */,
+				04F853461FCE321300A2701D /* CustomCell.xib */,
 			);
 			path = CookiesAgain;
 			sourceTree = "<group>";
@@ -241,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F853481FCE321300A2701D /* CustomCell.xib in Resources */,
 				04F853151FCE27D900A2701D /* LaunchScreen.storyboard in Resources */,
 				04F853121FCE27D900A2701D /* Assets.xcassets in Resources */,
 				04F8530D1FCE27D900A2701D /* Main.storyboard in Resources */,
@@ -271,6 +290,9 @@
 				04F8530A1FCE27D800A2701D /* ViewController.m in Sources */,
 				04F853071FCE27D800A2701D /* AppDelegate.m in Sources */,
 				04F853181FCE27D900A2701D /* main.m in Sources */,
+				04F8533F1FCE2A6700A2701D /* Cookie.m in Sources */,
+				04F853471FCE321300A2701D /* CustomCell.m in Sources */,
+				04F8533C1FCE29E800A2701D /* CookiesJSON.m in Sources */,
 				04F853101FCE27D900A2701D /* CookiesAgain.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

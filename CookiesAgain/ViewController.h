@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
+@property (nonatomic, strong) NSArray *cookies;
+@property (strong, nonatomic) IBOutlet UICollectionView *cookieCollection;
 
 @end
 
