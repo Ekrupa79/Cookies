@@ -10,6 +10,8 @@
 #import "CookiesJSON.h"
 #import "CustomCell.h"
 #import "Cookie.h"
+#import "CookieCoreData.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -28,16 +30,10 @@
     [self.cookieCollection registerNib:[UINib nibWithNibName:@"CustomCell" bundle:nil] forCellWithReuseIdentifier:@"CookieCell"];
     
     CookieJSON *cookieCaller = [[CookieJSON alloc] init];
-    cookies = [cookieCaller setupCookies];
-    //Intended for testing of Cookies array data, will be removed once CoreData is implemented
-//    NSLog(@"%lu", (unsigned long)cookies.count);
-//    for(int i = 0;i<cookies.count;i++){
-//        NSLog(@"Name: %@", [[cookies objectAtIndex:i] name]);
-//        NSLog(@"id: %d", [[[cookies objectAtIndex:i] cookieID] intValue]);
-//        NSLog(@"imageUrl: %@",[[cookies objectAtIndex:i] imageURL]);
-//        NSLog(@"price: %@", [[cookies objectAtIndex:i] price]);
-//        NSLog(@"addDate: %@", [[cookies objectAtIndex:i] addDate]);
-//    }
+    [cookieCaller setupCookies];
+
+    CookieCoreData *coreDataCaller = [[CookieCoreData alloc] init];
+    cookies = [coreDataCaller getAllCookies];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,9 +46,13 @@
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CustomCell *cell = [self.cookieCollection dequeueReusableCellWithReuseIdentifier:@"CookieCell" forIndexPath:indexPath];
+    
+    cell.layer.borderColor = [[UIColor redColor] CGColor];
+    cell.layer.borderWidth = 2.0;
+    
     Cookie *cookie = [cookies objectAtIndex:indexPath.row];
     cell.nameLbl.text = cookie.name;
-    cell.priceLbl.text = [NSString stringWithFormat:@"£%.02f", [cookie.price doubleValue]];
+    cell.priceLbl.text = [NSString stringWithFormat:@"£%@", cookie.price];
 
     //Setup for Image
     dispatch_async(dispatch_get_global_queue(0,0),^{
@@ -64,6 +64,15 @@
     });
     
     return cell;
+}
+
+-(NSManagedObjectContext *)managedObjectContext{
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if([delegate performSelector:@selector(managedObjectContext)]){
+        context = [delegate managedObjectContext];
+    }
+    return context;
 }
 
 @end

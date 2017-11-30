@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04BC5B811FCF8D4C00A95176 /* CookieCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BC5B801FCF8D4C00A95176 /* CookieCoreData.m */; };
 		04F853071FCE27D800A2701D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F853061FCE27D800A2701D /* AppDelegate.m */; };
 		04F8530A1FCE27D800A2701D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F853091FCE27D800A2701D /* ViewController.m */; };
 		04F8530D1FCE27D900A2701D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F8530B1FCE27D900A2701D /* Main.storyboard */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04BC5B7F1FCF8D4C00A95176 /* CookieCoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CookieCoreData.h; sourceTree = "<group>"; };
+		04BC5B801FCF8D4C00A95176 /* CookieCoreData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookieCoreData.m; sourceTree = "<group>"; };
 		04F853021FCE27D800A2701D /* CookiesAgain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookiesAgain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F853051FCE27D800A2701D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04F853061FCE27D800A2701D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 				04F853441FCE321300A2701D /* CustomCell.h */,
 				04F853451FCE321300A2701D /* CustomCell.m */,
 				04F853461FCE321300A2701D /* CustomCell.xib */,
+				04BC5B7F1FCF8D4C00A95176 /* CookieCoreData.h */,
+				04BC5B801FCF8D4C00A95176 /* CookieCoreData.m */,
 			);
 			path = CookiesAgain;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BC5B811FCF8D4C00A95176 /* CookieCoreData.m in Sources */,
 				04F8530A1FCE27D800A2701D /* ViewController.m in Sources */,
 				04F853071FCE27D800A2701D /* AppDelegate.m in Sources */,
 				04F853181FCE27D900A2701D /* main.m in Sources */,

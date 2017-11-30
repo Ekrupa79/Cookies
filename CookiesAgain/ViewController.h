@@ -10,7 +10,7 @@
 
 @interface ViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic, strong) NSArray *cookies;
+@property (strong, nonatomic) NSArray *cookies;
 @property (strong, nonatomic) IBOutlet UICollectionView *cookieCollection;
 
 @end

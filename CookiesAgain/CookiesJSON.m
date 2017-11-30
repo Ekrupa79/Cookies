@@ -7,8 +7,8 @@
 
 #import "CookiesJSON.h"
 #import "Cookie.h"
-//#import <CoreData/CoreData.h>
-//#import "AppDelegate.h"
+#import "AppDelegate.h"
+#import "CookieCoreData.h"
 
 @implementation CookieJSON
 
@@ -34,6 +34,8 @@
     
     NSArray *cookieData = [result objectForKey:@"cookies"];
     
+    CookieCoreData *cdCookie = [[CookieCoreData alloc] init];
+    
     for(int i=0;i<cookieData.count;i++){
         NSNumber *cookieID = [cookieData[i] objectForKey:@"id"];
         NSString *name = [cookieData[i] objectForKey:@"name"];
@@ -41,6 +43,13 @@
         NSString *imageURL = [cookieData[i] objectForKey:@"imageURL"];
         NSString *addedOn = [cookieData[i] objectForKey:@"addedOn"];
         Cookie *cookie = [[Cookie alloc] initWithID:cookieID name:name imageUrl:imageURL addDate:addedOn price:price];
+        
+        if(![cdCookie checkCookieExistence:cookie.name]){
+            NSLog(@"COOKIE DOES NOT EXIST: %@", cookie.name);
+            [cdCookie saveToCoreData:cookie];
+        }else{
+            NSLog(@"COOKIE EXISTS!");
+        }
         
         [cookies addObject:cookie];
     }
